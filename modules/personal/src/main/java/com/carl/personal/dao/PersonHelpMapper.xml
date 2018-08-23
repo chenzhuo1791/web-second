@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.carl.personal.dao.PersonHelpMapper" >
+
+
+    <select id="findPersonById" parameterType="Long"  resultType="com.carl.personal.model.Person">
+        SELECT per.* FROM person per WHERE per.id = #{id} LIMIT 1
+    </select>
+
+    <select id="listAllPerson" resultType="com.carl.personal.model.Person">
+        SELECT per.* FROM person per ORDER BY per.age DESC
+    </select>
+
+</mapper>

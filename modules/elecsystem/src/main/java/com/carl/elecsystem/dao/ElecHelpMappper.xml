@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.carl.elecsystem.dao.ElecHelpMappper" >
+
+
+    <select id="findRoleById" parameterType="Long"  resultType="com.carl.elecsystem.model.ElecRole">
+        SELECT * FROM elec_role er WHERE er.roleID = #{id}  LIMIT 1
+    </select>
+
+</mapper>
